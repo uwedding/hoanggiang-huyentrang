@@ -8,7 +8,7 @@ function Handle_MessageBox(
   filterValue,
 ) {
   // URL để lấy dữ liệu từ Google Sheets
-  const sheetIDLoiChuc = "1crQqVlMhGYEE5gTxbDybIjOn9kqZXLvDATqfOLOj3II";
+  const sheetIDLoiChuc = "19cZSWFdj4X8BYB49ZAF3uTenskOKfe3726tIicpTqWs";
   const urlLoiChuc = `https://docs.google.com/spreadsheets/d/${sheetIDLoiChuc}/gviz/tq?tqx=out:json`;
 
   fetch(urlLoiChuc)
