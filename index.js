@@ -207,13 +207,26 @@ document
 //   fetchMessages(); // Gọi hàm load dữ liệu
 // });
 
-// window.addEventListener('DOMContentLoaded', function () {
-//   // Lấy tham số name từ URL
-//   const params = new URLSearchParams(window.location.search);
-//   const name = params.get('name');
-//   // Hiển thị vào div PARAGRAPH94 nếu có giá trị
-//   if (name) {
-//     const el = document.querySelector('#PARAGRAPH444 .ladi-paragraph');
-//     if (el) el.textContent = name;
-//   }
-// });
+window.addEventListener('DOMContentLoaded', function () {
+  // Lấy tham số name từ URL
+  const params = new URLSearchParams(window.location.search);
+  // const name = params.get('name');
+  const target = params.get('target')
+  const groomEls = document.querySelectorAll(".groom");
+  const brideEls = document.querySelectorAll(".bride");
+
+  if (target === "bride") {
+    // Hiện bride
+    brideEls.forEach(el => el.style.display = "block");
+    groomEls.forEach(el => el.style.display = "none");
+  } else {
+    // Mặc định hiện groom
+    groomEls.forEach(el => el.style.display = "block");
+    brideEls.forEach(el => el.style.display = "none");
+  }
+  // Hiển thị vào div PARAGRAPH94 nếu có giá trị
+  // if (name) {
+  //   const el = document.querySelector('#PARAGRAPH444 .ladi-paragraph');
+  //   if (el) el.textContent = name;
+  // }
+});
